@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Optional
-
+# uvicorn main:app --reload
 app = FastAPI()
 
 
@@ -11,7 +11,7 @@ def read_root():
 
 
 @app.get("/{id_no}")
-def put_java(id_no: str):
-    # number = id_no * id_no
+def put_java(id_no: int):
+    number = id_no * id_no
     # return {f"power of {id_no} is ": f"{number}"}
-    return {"Input is": id_no}
+    return {"power values is ": number}
