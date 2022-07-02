@@ -15,3 +15,8 @@ def put_java(id_no: int):
     number = id_no * id_no
     # return {f"power of {id_no} is ": f"{number}"}
     return {"power values is ": number}
+
+
+@app.get("/{name}")
+def put_java(name: str):
+    return {"Hello ": name}
